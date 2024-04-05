@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Carousel.scss";
 import { carouselState } from "../../App";
+import img from "../../assets/img/hedgehog.jpg";
 
 type CarouselProps = {
   obj: carouselState;
@@ -25,25 +26,36 @@ const Carousel = ({ obj }: CarouselProps) => {
     const newIndex = index + 1;
     setIndex(newIndex >= length ? 0 : newIndex);
   };
-  console.log("obj ger: ", obj);
-  console.log("Index är nu: ", index);
-  console.log("length är nu: ", length);
 
+  console.log("bild? ", obj);
   return (
-    <div className="carousel">
-      <button onClick={handlePrevious}>Föregående</button>
-      {obj.carousel.map((element, i) => {
-        return (
-          index === i && (
-            <div key={element.id} className={`item ${i + 1}`}>
-              {element.title}
-            </div>
-          )
-        );
-      })}
-
-      <button onClick={handleNext}>Nästa</button>
-      <p>{index + 1}</p>
+    <div className="Carousel">
+      <div className="carousel-card">
+        <button className="btn prev" onClick={handlePrevious}>
+          {"<"}
+        </button>
+        <div className="carousel-item">
+          {obj.carousel.map((element, i) => {
+            return (
+              index === i && (
+                <div key={element.id} className={`item ${i + 1}`}>
+                  {element.img && (
+                    <img className="carousel-img" src={element.img} alt="img" />
+                  )}
+                  <h1 className="item-title">{element.title}</h1>
+                  <p>{element.info}</p>
+                </div>
+              )
+            );
+          })}
+        </div>
+        <button className="btn next" onClick={handleNext}>
+          {">"}
+        </button>
+      </div>
+      <div id="page-viewer">
+        <p id="page-info-text">{index + 1}</p>
+      </div>
     </div>
   );
 };

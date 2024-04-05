@@ -6,6 +6,7 @@ type oneCarousel = {
   id: string;
   title: string;
   info: string;
+  img: string | null;
 };
 
 export type carouselState = {
@@ -16,28 +17,33 @@ const myObj: carouselState = {
   carousel: [
     {
       id: uuid(),
-      title: "Första",
-      info: "Detta är den första",
+      title: "Quibusdam",
+      info: "Quibusdam illo excepturi, mollitia omnis optio facere.",
+      img: "./src/assets/img/hedgehog.jpg",
     },
     {
       id: uuid(),
-      title: "Andra",
-      info: "Detta är den andra",
+      title: "Elit",
+      info: "Consectetur, adipisicing elit, nesciunt debitis quisquam nemo temporibus.",
+      img: null,
     },
     {
       id: uuid(),
-      title: "Tredje",
-      info: "Detta är den tredje",
+      title: "Nesciunt",
+      info: "Nesciunt debitis quisquam nemo temporibus amet sunt.",
+      img: null,
     },
     {
       id: uuid(),
-      title: "Fjärde",
-      info: "Detta är den fjärde",
+      title: "Facere",
+      info: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea praesentium ex ullam quibusdam illo excepturi aperiam pariatur? Accusantium, maxime mollitia omnis optio facere nesciunt debitis quisquam nemo temporibus.",
+      img: "./src/assets/img/partyHog.jpg",
     },
     {
       id: uuid(),
-      title: "Femte",
-      info: "Detta är den femte",
+      title: "Excepturi",
+      info: "Ea praesentium ex ullam quibusdam illo excepturi aperiam pariatur? Accusantium, maxime mollitia omnis optio facere nesciunt debitis quisquam nemo.",
+      img: null,
     },
   ],
 };

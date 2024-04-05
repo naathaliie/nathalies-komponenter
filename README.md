@@ -1,5 +1,14 @@
 Carousel komponenten:
 
-A carousel component
+En karusell-komponent som tar emot ett object och visar upp antingen titel och info eller bild, titel och info.
 
-Props: A object
+Karusellen har tre olika färgval:
+color-primary
+color-background-hover
+color-hover
+
+props?
+object{}
+
+Bild?
+Den relativa sökvägen skall ses som att den är från index.html eller vara null

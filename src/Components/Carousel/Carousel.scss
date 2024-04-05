@@ -1,3 +1,71 @@
-#carousel-box{
-    //color:primary tex
+@import "../../scss/colors";
+
+.Carousel{
+  //color:primary tex
+  width: 20rem;
+  height: auto;
+  border: $color-primary solid 2px;
+  padding: 1rem;
+
+  .carousel-card {
+    display: flex;
+    justify-content: center;
+    border: dotted $color-background-hover 2px;
+    width: 100%;
+    height: auto;
+    
+
+    .btn {
+      width: auto;
+      height: 1.5rem;
+      background-color: $color-hover;
+      align-self:flex-start;
+      &:hover {
+        background-color: $color-background-hover;
+        color: $color-hover;
+      }
+
+      &.prev{
+        position: absolute;
+        top: 7rem;
+        left: 2rem;
+      }
+
+      &.next{
+        position: absolute;
+        top: 7rem;
+        left: 20rem;
+      }
+    }
+
+    
+
+    .carousel-item {
+      width: 80%;
+      height: 100%;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column; 
+      text-align: center; /* Centrerar titeln */
+      justify-content: space-between;
+
+      .carousel-img{
+        width: 10rem;
+        height: 8rem;
+      }
+    }
+  }
+
+  #page-viewer {
+    display: flex;
+    justify-content: center;
+    #page-info-text {
+      border: solid $color-primary 2px;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
