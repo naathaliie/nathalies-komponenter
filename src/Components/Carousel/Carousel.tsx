@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./Carousel.scss";
-import { carouselState } from "../../App";
+import { CarouselState } from "../../types";
 
 type CarouselProps = {
-  obj: carouselState;
+  obj: CarouselState;
 };
 
 const Carousel = ({ obj }: CarouselProps) => {
