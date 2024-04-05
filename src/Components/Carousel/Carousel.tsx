@@ -1,13 +1,14 @@
 import { useState } from "react";
 import "./Carousel.scss";
+import { carouselState } from "../../App";
 
 type CarouselProps = {
-  array: string[];
+  obj: carouselState;
 };
 
-const Carousel = ({ array }: CarouselProps) => {
+const Carousel = ({ obj }: CarouselProps) => {
   const [index, setIndex] = useState(0);
-  const length = array.length;
+  const length = obj.carousel.length;
 
   /*Hantera klick på föregeånde.
     Skapar en ny variabel newIndex som är nuvarande index - 1.
@@ -24,15 +25,21 @@ const Carousel = ({ array }: CarouselProps) => {
     const newIndex = index + 1;
     setIndex(newIndex >= length ? 0 : newIndex);
   };
-  console.log("Arrayen ger: ", array);
+  console.log("obj ger: ", obj);
   console.log("Index är nu: ", index);
   console.log("length är nu: ", length);
 
   return (
     <div className="carousel">
       <button onClick={handlePrevious}>Föregående</button>
-      {array.map((element, i) => {
-        return index === i && <div className={`item ${i + 1}`}>{element}</div>;
+      {obj.carousel.map((element, i) => {
+        return (
+          index === i && (
+            <div key={element.id} className={`item ${i + 1}`}>
+              {element.title}
+            </div>
+          )
+        );
       })}
 
       <button onClick={handleNext}>Nästa</button>
