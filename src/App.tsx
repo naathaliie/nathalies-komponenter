@@ -1,19 +1,9 @@
 import "./App.css";
 import Carousel from "./Components/Carousel/Carousel";
 import uuid from "react-uuid";
+import { CarouselState } from "./types";
 
-type oneCarousel = {
-  id: string;
-  title: string;
-  info: string;
-  img: string | null;
-};
-
-export type carouselState = {
-  carousel: oneCarousel[];
-};
-
-const myObj: carouselState = {
+const myObj: CarouselState = {
   carousel: [
     {
       id: uuid(),

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Carousel.scss";
 import { carouselState } from "../../App";
-import img from "../../assets/img/hedgehog.jpg";
 
 type CarouselProps = {
   obj: carouselState;
@@ -11,27 +10,15 @@ const Carousel = ({ obj }: CarouselProps) => {
   const [index, setIndex] = useState(0);
   const length = obj.carousel.length;
 
-  /*Hantera klick på föregeånde.
-    Skapar en ny variabel newIndex som är nuvarande index - 1.
-    I setIndex kollar vi om newIndex är mindre än 0 ? length -1 : newindex; */
-  const handlePrevious = () => {
-    const newIndex = index - 1;
-    setIndex(newIndex < 0 ? length - 1 : newIndex);
-  };
-
-  /* Hantera klick på nästa.
-    Skapar en ny variabel newIndex som är nuvarande index + 1.
-    I setIndex kollar vi om newIndex är större eller lika med length ? 0 : newIndex; */
-  const handleNext = () => {
-    const newIndex = index + 1;
-    setIndex(newIndex >= length ? 0 : newIndex);
-  };
-
-  console.log("bild? ", obj);
   return (
     <div className="Carousel">
       <div className="carousel-card">
-        <button className="btn prev" onClick={handlePrevious}>
+        <button
+          className="btn prev"
+          onClick={() => {
+            setIndex(index - 1 < 0 ? length - 1 : index - 1);
+          }}
+        >
           {"<"}
         </button>
         <div className="carousel-item">
@@ -49,7 +36,12 @@ const Carousel = ({ obj }: CarouselProps) => {
             );
           })}
         </div>
-        <button className="btn next" onClick={handleNext}>
+        <button
+          className="btn next"
+          onClick={() => {
+            setIndex(index + 1 >= length ? 0 : index + 1);
+          }}
+        >
           {">"}
         </button>
       </div>
