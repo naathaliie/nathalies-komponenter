@@ -12,3 +12,6 @@ object{}
 
 Bild?
 Den relativa sökvägen skall ses som att den är från index.html eller vara null
+
+Lägga til??
+Så att man kan ha olika iconer till knapparna prev och next
