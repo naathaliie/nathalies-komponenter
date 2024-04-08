@@ -2,6 +2,7 @@ import "./App.css";
 import Carousel from "./Components/Carousel/Carousel";
 import uuid from "react-uuid";
 import { CarouselState } from "./types";
+import Button from "./Components/Button/Button";
 
 const myObj: CarouselState = {
   carousel: [
@@ -38,11 +39,20 @@ const myObj: CarouselState = {
   ],
 };
 
+const onClick = () => {
+  console.log("click :)");
+};
+
 function App() {
   return (
-    <div id="app">
+    <>
       <Carousel obj={myObj} />
-    </div>
+      <Button
+        onClickFunction={onClick}
+        btnName={"klicka mig"}
+        iconRight={"🐝"}
+      />
+    </>
   );
 }
 

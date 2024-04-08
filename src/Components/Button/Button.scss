@@ -1,0 +1,15 @@
+@use "../../scss/colors" as *;
+
+.Button {
+    width: auto;
+    height: auto;
+    transition: transform 0.1s ease;
+  &:hover {
+    background-color: $color-background-hover;
+    color: $color-hover;
+  }
+  &:active {
+    transform: translateX(5px); /* Flytta knappen 5 pixlar åt höger när den är aktiv */
+  }
+}
+
