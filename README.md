@@ -32,3 +32,6 @@ En karusell-komponent som tar emot ett object och visar upp antingen titel och i
 
 - if you want to check more icons, go to =>
 https://react-icons-v2.vercel.app/
+
+
+***********************************************************************************************
