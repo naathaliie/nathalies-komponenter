@@ -16,6 +16,9 @@ En karusell-komponent som tar emot ett object och visar upp antingen titel och i
 ### Lägga til??
 * Så att man kan ha olika iconer till knapparna prev och next
 
+************************************************************************************************
+
+
 
 ## Information if you want to use all the icons intended for this Navbar
 * You need to install a patch which is
