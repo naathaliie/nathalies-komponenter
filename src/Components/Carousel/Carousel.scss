@@ -13,7 +13,7 @@
     border: dotted $color-background-hover 2px;
     width: 100%;
     height: auto;
-    
+
 
     .btn {
       width: auto;
@@ -25,16 +25,14 @@
         color: $color-hover;
       }
 
-      &.prev{
-        position: absolute;
-        top: 7rem;
-        left: 2rem;
+      &.prev {
+        margin-top: 5rem;
+        margin-left: 0.3rem;
       }
 
-      &.next{
-        position: absolute;
-        top: 7rem;
-        left: 20rem;
+      &.next {
+        margin-top: 5rem;
+        margin-right: 0.3rem;
       }
     }
 

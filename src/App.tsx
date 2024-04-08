@@ -2,6 +2,7 @@ import "./App.css";
 import Carousel from "./Components/Carousel/Carousel";
 import uuid from "react-uuid";
 import { CarouselState } from "./types";
+import Navbar from "./Components/Navbar/NavBar";
 
 const myObj: CarouselState = {
   carousel: [
@@ -38,11 +39,22 @@ const myObj: CarouselState = {
   ],
 };
 
+const GoToNavLink = [
+  { Text: 'Home', href: '/#' },
+  { Text: 'About oss', href: '/#' },
+  { Text: 'Contakt oss', href: '/#' },
+  { Text: 'Different services', href: '/#' },
+  { Text: 'Cooperate with oss', href: '/#' }
+];
+
 function App() {
   return (
+    <>
+    <Navbar GoToNavLink={GoToNavLink} />
     <div id="app">
       <Carousel obj={myObj} />
     </div>
+    </>
   );
 }
 
