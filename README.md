@@ -11,15 +11,20 @@ Komponenten har tre färgval:
 - - color-background-hover
 - - color-hover
 
-### props?
+Props?
 
 - object{}
   Exempelobject finner du i src/Components/Carousel/carouselTypes
 
-## Bild?
+Bild?
 
 - Den relativa sökvägen skall ses som att den är från index.html eller vara null
   Exempelbilder till myObj (src/Components/Carousel/carouselTypes) finner du i src/assets/img
+
+Dependency?
+
+-uuid -> npm instal -D react-uuid
+-React icons -> npm i react-icons
 
 ---
 
@@ -32,6 +37,9 @@ En enkel knapp som kan ta emot en onClick-funktion samt innehålla:
 - iconRight= icon som lägger sig till höger
 
 Exempel på en onClick-funktion som du kan använda finner du src/Components/Button/ButtonOnClick
+
+Dependency
+-React icons -> npm i react-icons
 
 ---
 
