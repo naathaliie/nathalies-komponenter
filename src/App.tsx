@@ -6,6 +6,8 @@ import Navbar from "./Components/Navbar/NavBar";
 
 import Button from "./Components/Button/Button";
 import { onClick } from "./Components/Button/ButtonOnClick";
+import Header from "./Components/Header/Header";
+import Form from "./Components/Form/Form";
 
 const GoToNavLink = [
   { Text: "Home", href: "/#" },
@@ -29,6 +31,8 @@ function App() {
         btnName={"klicka mig"}
         iconRight={iconRight}
       />
+      <Header />
+      <Form />
     </>
   );
 }
