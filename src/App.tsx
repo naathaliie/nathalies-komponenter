@@ -1,6 +1,6 @@
 import "./App.css";
 import Carousel from "./Components/Carousel/Carousel";
-import { myObj } from "./types";
+import { myObj } from "./Components/Carousel/carouselTypes";
 
 import Navbar from "./Components/Navbar/NavBar";
 

@@ -2,6 +2,7 @@
 
 .Carousel {
   width: 20rem;
+  min-height: 15rem;
   height: auto;
   border: $color-primary solid 2px;
   padding: 1rem;
@@ -9,8 +10,10 @@
   .carousel-card {
     display: flex;
     justify-content: center;
+    align-items: center;
     border: dotted $color-background-hover 2px;
     width: 100%;
+    min-height: 15rem;
     height: auto;
 
 
@@ -75,6 +78,7 @@
   #page-viewer {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
     #page-info-text {
       border: solid $color-background-hover 1px;
       border-radius: 50%;

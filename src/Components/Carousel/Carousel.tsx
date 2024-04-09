@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Carousel.scss";
-import { CarouselState } from "../../types";
+import { CarouselState } from "./carouselTypes";
 import { FiChevronsLeft } from "react-icons/fi"; // ikon från react-icons
 import { FiChevronsRight } from "react-icons/fi";
 
