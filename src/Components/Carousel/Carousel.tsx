@@ -9,19 +9,37 @@ type CarouselProps = {
 const Carousel = ({ obj }: CarouselProps) => {
   const [index, setIndex] = useState(0);
   const length = obj.carousel.length;
+  const [animationDirection, setAnimationDirection] = useState<string>("");
+
+  const handlePreviousClick = () => {
+    setIndex(index - 1 < 0 ? length - 1 : index - 1);
+
+    // Sätt klassen till null för att tvinga en uppdatering
+    setAnimationDirection(animationDirection ? "" : "clickedLeft");
+
+    // Efter en kort fördröjning, sätt klassen tillbaka till önskat värde.
+    setTimeout(() => {
+      setAnimationDirection("clickedLeft");
+    }, 1); // x millisekunders fördröjning, justera vid behov
+  };
+
+  const handleNextClick = () => {
+    setIndex(index + 1 >= length ? 0 : index + 1);
+    setAnimationDirection(animationDirection ? "" : "clickedRight");
+
+    // Efter en kort fördröjning, sätt klassen tillbaka till önskat värde.
+    setTimeout(() => {
+      setAnimationDirection("clickedRight");
+    }, 1); // x millisekunders fördröjning, justera vid behov
+  };
 
   return (
     <div className="Carousel">
       <div className="carousel-card">
-        <button
-          className="btn prev"
-          onClick={() => {
-            setIndex(index - 1 < 0 ? length - 1 : index - 1);
-          }}
-        >
+        <button className="btn prev" onClick={handlePreviousClick}>
           {"<"}
         </button>
-        <div className="carousel-item">
+        <div className={`carousel-item ${animationDirection}`}>
           {obj.carousel.map((element, i) => {
             return (
               index === i && (
@@ -36,12 +54,7 @@ const Carousel = ({ obj }: CarouselProps) => {
             );
           })}
         </div>
-        <button
-          className="btn next"
-          onClick={() => {
-            setIndex(index + 1 >= length ? 0 : index + 1);
-          }}
-        >
+        <button className="btn next" onClick={handleNextClick}>
           {">"}
         </button>
       </div>

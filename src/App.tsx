@@ -2,7 +2,11 @@ import "./App.css";
 import Carousel from "./Components/Carousel/Carousel";
 import uuid from "react-uuid";
 import { CarouselState } from "./types";
+
 import Navbar from "./Components/Navbar/NavBar";
+
+import Button from "./Components/Button/Button";
+
 
 const myObj: CarouselState = {
   carousel: [
@@ -39,6 +43,7 @@ const myObj: CarouselState = {
   ],
 };
 
+
 const GoToNavLink = [
   { Text: 'Home', href: '/#' },
   { Text: 'About oss', href: '/#' },
@@ -47,13 +52,27 @@ const GoToNavLink = [
   { Text: 'Cooperate with oss', href: '/#' }
 ];
 
+const onClick = () => {
+  console.log("click :)");
+};
+
+
 function App() {
   return (
     <>
+
     <Navbar GoToNavLink={GoToNavLink} />
     <div id="app">
       <Carousel obj={myObj} />
     </div>
+
+      <Carousel obj={myObj} />
+      <Button
+        onClickFunction={onClick}
+        btnName={"klicka mig"}
+        iconRight={"🐝"}
+      />
+
     </>
   );
 }
