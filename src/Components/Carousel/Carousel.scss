@@ -1,5 +1,6 @@
 @import "../../scss/colors";
 
+
 .Carousel {
   width: 20rem;
   min-height: 15rem;
@@ -26,11 +27,12 @@
       .chevron-icon-left{
         display: flex;
         align-items: center;
+        color: $color-primary;
       }
 
       .chevron-icon-right{
-        display: flex;
-        align-items: center;
+        color: $color-primary;
+        color: $color-primary;
       }
 
       &:hover {
@@ -51,7 +53,7 @@
     }
 
     .carousel-item {
-      width: 80%;
+      width: 250px;
       height: 100%;
       padding: 1rem;
       display: flex;
