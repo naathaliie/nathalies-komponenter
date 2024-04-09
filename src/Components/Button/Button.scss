@@ -3,13 +3,15 @@
 .Button {
     width: auto;
     height: auto;
-    transition: transform 0.1s ease;
+    transition: transform 0.1s ease; // Nuvarande transition-effect för transform
   &:hover {
     background-color: $color-background-hover;
     color: $color-hover;
   }
   &:active {
-    transform: translateX(5px); /* Flytta knappen 5 pixlar åt höger när den är aktiv */
-  }
+    transform: translateX(5px); // Flytta knappen 5 pixlar åt höger när den är aktiv 
+    transition-duration: 0.05s; // Här minskar vi durationen för transition till 0.05s
+
+}
 }
 
