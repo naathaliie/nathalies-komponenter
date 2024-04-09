@@ -15,15 +15,19 @@ const GoToNavLink = [
   { Text: "Cooperate with oss", href: "/#" },
 ];
 
+const iconLeft = "🛸";
+const iconRight = "🐝";
+
 function App() {
   return (
     <>
       <Navbar GoToNavLink={GoToNavLink} />
       <Carousel obj={myObj} />
       <Button
+        iconLeft={iconLeft}
         onClickFunction={onClick}
         btnName={"klicka mig"}
-        iconRight={"🐝"}
+        iconRight={iconRight}
       />
     </>
   );
