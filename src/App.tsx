@@ -1,7 +1,6 @@
 import "./App.css";
 import Carousel from "./Components/Carousel/Carousel";
-import uuid from "react-uuid";
-import { CarouselState, myObj } from "./types";
+import { myObj } from "./types";
 
 import Navbar from "./Components/Navbar/NavBar";
 
