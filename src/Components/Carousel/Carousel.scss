@@ -1,7 +1,6 @@
 @import "../../scss/colors";
 
 .Carousel {
-  //color:primary tex
   width: 20rem;
   height: auto;
   border: $color-primary solid 2px;
@@ -26,7 +25,6 @@
       }
 
       &.prev {
-
         margin-top: 5rem;
         margin-left: 0.3rem;
       }
@@ -34,18 +32,8 @@
       &.next {
         margin-top: 5rem;
         margin-right: 0.3rem;
-
-        position: absolute;
-        top: 7rem;
-        left: 2rem;
       }
 
-      &.next {
-        position: absolute;
-        top: 7rem;
-        left: 20rem;
-
-      }
     }
 
     .carousel-item {
@@ -62,7 +50,8 @@
       }
 
       &.clickedRight {
-        animation: goRight 5s forwards;
+        animation: slideRight
+         5s forwards;
       }
 
       .carousel-img {
@@ -76,6 +65,7 @@
     display: flex;
     justify-content: center;
     #page-info-text {
+      border: solid $color-background-hover 1px;
       border-radius: 50%;
       width: 2rem;
       height: 2rem;
@@ -99,7 +89,8 @@
       }
   }
 
-@keyframes goRight {
+@keyframes slideRight
+ {
     0% {
         left: 0px;
         opacity: 0;

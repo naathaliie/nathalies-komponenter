@@ -7,7 +7,6 @@ import Navbar from "./Components/Navbar/NavBar";
 
 import Button from "./Components/Button/Button";
 
-
 const myObj: CarouselState = {
   carousel: [
     {
@@ -43,36 +42,32 @@ const myObj: CarouselState = {
   ],
 };
 
-
 const GoToNavLink = [
-  { Text: 'Home', href: '/#' },
-  { Text: 'About oss', href: '/#' },
-  { Text: 'Contakt oss', href: '/#' },
-  { Text: 'Different services', href: '/#' },
-  { Text: 'Cooperate with oss', href: '/#' }
+  { Text: "Home", href: "/#" },
+  { Text: "About oss", href: "/#" },
+  { Text: "Contakt oss", href: "/#" },
+  { Text: "Different services", href: "/#" },
+  { Text: "Cooperate with oss", href: "/#" },
 ];
 
 const onClick = () => {
   console.log("click :)");
 };
 
-
 function App() {
   return (
     <>
-
-    <Navbar GoToNavLink={GoToNavLink} />
-    <div id="app">
+      <Navbar GoToNavLink={GoToNavLink} />
+      {/* <div id="app">
       <Carousel obj={myObj} />
-    </div>
+    </div> */}
 
       <Carousel obj={myObj} />
-      <Button
+      {/*   <Button
         onClickFunction={onClick}
         btnName={"klicka mig"}
         iconRight={"🐝"}
-      />
-
+      /> */}
     </>
   );
 }
