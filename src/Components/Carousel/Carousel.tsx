@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./Carousel.scss";
 import { CarouselState } from "../../types";
+import { FiChevronsLeft } from "react-icons/fi"; // ikon från react-icons
+import { FiChevronsRight } from "react-icons/fi";
 
 type CarouselProps = {
   obj: CarouselState;
@@ -37,7 +39,7 @@ const Carousel = ({ obj }: CarouselProps) => {
     <div className="Carousel">
       <div className="carousel-card">
         <button className="btn prev" onClick={handlePreviousClick}>
-          {"<"}
+          <FiChevronsLeft className="chevron-icon-left" />
         </button>
         <div className={`carousel-item ${animationDirection}`}>
           {obj.carousel.map((element, i) => {
@@ -55,7 +57,7 @@ const Carousel = ({ obj }: CarouselProps) => {
           })}
         </div>
         <button className="btn next" onClick={handleNextClick}>
-          {">"}
+          <FiChevronsRight className="chevron-icon-right" />
         </button>
       </div>
       <div id="page-viewer">

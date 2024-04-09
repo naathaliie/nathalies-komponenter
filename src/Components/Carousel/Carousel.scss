@@ -19,6 +19,17 @@
       height: 1.5rem;
       background-color: $color-hover;
       align-self: flex-start;
+      
+      .chevron-icon-left{
+        display: flex;
+        align-items: center;
+      }
+
+      .chevron-icon-right{
+        display: flex;
+        align-items: center;
+      }
+
       &:hover {
         background-color: $color-background-hover;
         color: $color-hover;
