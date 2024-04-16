@@ -8,6 +8,7 @@ import Button from "./Components/Button/Button";
 import { onClick } from "./Components/Button/ButtonOnClick";
 import Header from "./Components/Header/Header";
 import Form from "./Components/Form/Form";
+import Todo from "./Components/Todo/Todo";
 
 const GoToNavLink = [
   { Text: "Home", href: "/#" },
@@ -33,6 +34,7 @@ function App() {
       />
       <Header />
       <Form />
+      <Todo/>
     </>
   );
 }
