@@ -57,3 +57,9 @@ Dependency
   https://react-icons-v2.vercel.app/
 
 ---
+
+Todo component 
+
+* A checkbox list showing your todos 
+* A progress bar to illustrate your progress 
+* Confetti when a box is checked for an extra motivational boost. 
